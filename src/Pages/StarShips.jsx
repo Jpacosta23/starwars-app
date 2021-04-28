@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
-import ShipItem from "../Components/ShipItem";
+import VehicleItem from "../Components/VehicleItem";
 import Paginator from "../Components/Paginator";
 import { GetContext } from "../Context/Context";
 import { useParams } from "react-router-dom";
 
-const Ships = () => {
+const StarShips = () => {
   const {
     toggleShips,
     infoShips,
@@ -16,11 +16,11 @@ const Ships = () => {
   } = useContext(GetContext);
   const { pag } = useParams();
   setPage(parseInt(pag));
-  setParam("ships");
+  setParam("starships");
 
   const getInfo = async (page) => {
     try {
-      const URL = `https://swapi.dev/api/vehicles/?page=${page}`;
+      const URL = `https://swapi.dev/api/starships/?page=${page}`;
       const RES = await fetch(URL);
       const data = await RES.json();
       toggleShips(data.results);
@@ -41,11 +41,11 @@ const Ships = () => {
       <ul>
         {!infoShips.length
           ? "cargando"
-          : infoShips.map((vehicle) => <ShipItem info={vehicle} />)}
+          : infoShips.map((vehicle) => <VehicleItem info={vehicle} />)}
       </ul>
       <Paginator />
     </>
   );
 };
 
-export default Ships;
+export default StarShips;

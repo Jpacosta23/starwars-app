@@ -13,7 +13,10 @@ const Navigation = () => {
         <Link to="/planets/1">Planets</Link>
       </li>
       <li>
-        <Link to="/ships/1">Ships</Link>
+        <Link to="/vehicles/1">Vehicles</Link>
+      </li>
+      <li>
+        <Link to="/starships/1">Starships</Link>
       </li>
     </ul>
   );
