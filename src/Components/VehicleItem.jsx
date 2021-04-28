@@ -1,6 +1,6 @@
 import React, { Link } from "react-router-dom";
 
-const ShipItem = ({ info }) => {
+const VehicleItem = ({ info }) => {
   return (
     <>
       <Link to={`/ship/${info.name}`}>
@@ -16,4 +16,4 @@ const ShipItem = ({ info }) => {
   );
 };
 
-export default ShipItem;
+export default VehicleItem;
