@@ -7,6 +7,7 @@ import { InfoProvider } from "./Context/Context";
 import Vehicles from "./Pages/Vehicles";
 import Planets from "./Pages/Planets";
 import StarShips from "./Pages/StarShips";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

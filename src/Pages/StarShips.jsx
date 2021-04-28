@@ -36,8 +36,8 @@ const StarShips = () => {
 
   return (
     <>
-      <h1>Vehicles page</h1>
-      <p>Vehicles:</p>
+      <h1>Starships page</h1>
+      <p>Starships:</p>
       <ul>
         {!infoShips.length
           ? "cargando"
