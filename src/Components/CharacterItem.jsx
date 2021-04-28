@@ -3,7 +3,7 @@ import React, { Link } from "react-router-dom";
 const CharacterItem = ({ info }) => {
   return (
     <>
-      <Link to={`/people/${info.name}`}>
+      <Link to={`/character/${info.name}`}>
         <h2>{info.name}</h2>
         <ul>
           <li>Birth year: {info.birth_year}</li>

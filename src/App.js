@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import Characters from "./Pages/Characters";
 import { InfoProvider } from "./Context/Context";
 import Ships from "./Pages/Ships";
+import Planets from "./Pages/Planets";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/" component={Home} exact></Route>
           <Route path="/characters/:pag" component={Characters}></Route>
           <Route path="/ships/:pag" component={Ships}></Route>
-          <Route path="/planets"></Route>
+          <Route path="/planets/:pag" component={Planets}></Route>
         </Switch>
       </BrowserRouter>
     </InfoProvider>

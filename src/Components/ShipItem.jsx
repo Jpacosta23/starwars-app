@@ -3,7 +3,7 @@ import React, { Link } from "react-router-dom";
 const ShipItem = ({ info }) => {
   return (
     <>
-      <Link to={`/vehicle/${info.name}`}>
+      <Link to={`/ship/${info.name}`}>
         <h2>{info.name}</h2>
         <ul>
           <li>model: {info.model}</li>

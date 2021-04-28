@@ -13,6 +13,7 @@ export const InfoProvider = (props) => {
   const [info, setInfo] = useState({});
   const [page, setPage] = useState(1);
   const [infoShips, setInfoShips] = useState({});
+  const [infoPlanets, setInfoPlanets] = useState({});
   const [current, setCurrent] = useState("");
   const [param, setParam] = useState("");
 
@@ -23,6 +24,9 @@ export const InfoProvider = (props) => {
   };
   const toggleShips = (data) => {
     setInfoShips(data);
+  };
+  const togglePlanets = (data) => {
+    setInfoPlanets(data);
   };
 
   const context = {
@@ -36,6 +40,8 @@ export const InfoProvider = (props) => {
     toggleShips,
     param,
     setParam,
+    infoPlanets,
+    togglePlanets,
   };
 
   return <GetContext.Provider value={context}>{children}</GetContext.Provider>;
