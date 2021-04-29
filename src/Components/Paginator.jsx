@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 const Paginator = () => {
-  const { page, setPage, current, param } = useContext(GetContext);
+  const { page, setPage, current, param, info } = useContext(GetContext);
   let history = useHistory();
 
   const prevHandlerEvent = (event) => {
@@ -30,11 +30,11 @@ const Paginator = () => {
     history.push(`/${param}/${page2}`);
   };
   return (
-    <>
+    <div className={`${info.length < 2 ? "d-none" : null}`}>
       <button onClick={prevHandlerEvent}>Prev</button>
 
       <button onClick={nextHandlerEvent}>Next</button>
-    </>
+    </div>
   );
 };
 

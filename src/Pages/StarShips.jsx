@@ -1,30 +1,29 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
-import VehicleItem from "../Components/VehicleItem";
+import StarshipItem from "../Components/StarshipItem";
 import Paginator from "../Components/Paginator";
 import { GetContext } from "../Context/Context";
 import { useParams } from "react-router-dom";
 
 const StarShips = () => {
-  const {
-    toggleShips,
-    infoShips,
-    setPage,
-    page,
-    setCurrent,
-    setParam,
-  } = useContext(GetContext);
+  const { toggle, info, setPage, page, setCurrent, setParam } = useContext(
+    GetContext
+  );
   const { pag } = useParams();
   setPage(parseInt(pag));
   setParam("starships");
 
   const getInfo = async (page) => {
     try {
-      const URL = `https://swapi.dev/api/starships/?page=${page}`;
-      const RES = await fetch(URL);
-      const data = await RES.json();
-      toggleShips(data.results);
-      setCurrent(data);
+      if (page > 4) {
+        setPage(1);
+      } else {
+        const URL = `https://swapi.dev/api/starships/?page=${page}`;
+        const RES = await fetch(URL);
+        const data = await RES.json();
+        toggle(data.results);
+        setCurrent(data);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -39,9 +38,9 @@ const StarShips = () => {
       <h1>Starships page</h1>
       <p>Starships:</p>
       <ul>
-        {!infoShips.length
-          ? "cargando"
-          : infoShips.map((vehicle) => <VehicleItem info={vehicle} />)}
+        {!info.length
+          ? "loading..."
+          : info.map((vehicle) => <StarshipItem info={vehicle} />)}
       </ul>
       <Paginator />
     </>
