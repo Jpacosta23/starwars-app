@@ -16,7 +16,7 @@ function App() {
         <Navigation />
         <Switch>
           <Route path="/" component={Home} exact></Route>
-          <Route path="/characters/:pag" component={Characters}></Route>
+          <Route path="/people/:pag" component={Characters}></Route>
           <Route path="/vehicles/:pag" component={Vehicles}></Route>
           <Route path="/planets/:pag" component={Planets}></Route>
           <Route path="/starships/:pag" component={StarShips}></Route>

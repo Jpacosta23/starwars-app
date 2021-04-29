@@ -6,25 +6,24 @@ import { GetContext } from "../Context/Context";
 import { useParams } from "react-router-dom";
 
 const Vehicles = () => {
-  const {
-    toggleShips,
-    infoShips,
-    setPage,
-    page,
-    setCurrent,
-    setParam,
-  } = useContext(GetContext);
+  const { toggle, info, setPage, page, setCurrent, setParam } = useContext(
+    GetContext
+  );
   const { pag } = useParams();
   setPage(parseInt(pag));
   setParam("vehicles");
 
   const getInfo = async (page) => {
     try {
-      const URL = `https://swapi.dev/api/vehicles/?page=${page}`;
-      const RES = await fetch(URL);
-      const data = await RES.json();
-      toggleShips(data.results);
-      setCurrent(data);
+      if (page > 4) {
+        setPage(1);
+      } else {
+        const URL = `https://swapi.dev/api/vehicles/?page=${page}`;
+        const RES = await fetch(URL);
+        const data = await RES.json();
+        toggle(data.results);
+        setCurrent(data);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -33,15 +32,15 @@ const Vehicles = () => {
     getInfo(page);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
-
+  console.log(info);
   return (
     <>
       <h1>Vehicles page</h1>
       <p>Vehicles:</p>
       <ul>
-        {!infoShips.length
+        {!info.length
           ? "cargando"
-          : infoShips.map((vehicle) => <VehicleItem info={vehicle} />)}
+          : info.map((vehicle) => <VehicleItem info={vehicle} />)}
       </ul>
       <Paginator />
     </>

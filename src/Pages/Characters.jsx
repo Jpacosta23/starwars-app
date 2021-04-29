@@ -11,7 +11,7 @@ const Characters = () => {
   );
   const { pag } = useParams();
   setPage(parseInt(pag));
-  setParam("characters");
+  setParam("people");
 
   const getInfo = async (page) => {
     try {
