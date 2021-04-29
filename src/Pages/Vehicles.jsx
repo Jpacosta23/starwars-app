@@ -39,7 +39,7 @@ const Vehicles = () => {
       <p>Vehicles:</p>
       <ul>
         {!info.length
-          ? "cargando"
+          ? "loading..."
           : info.map((vehicle) => <VehicleItem info={vehicle} />)}
       </ul>
       <Paginator />

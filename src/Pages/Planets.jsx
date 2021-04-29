@@ -39,7 +39,7 @@ const Planets = () => {
       <p>Planets:</p>
       <ul>
         {!info.length
-          ? "cargando"
+          ? "loading..."
           : info.map((planet) => <PlanetItem info={planet} />)}
       </ul>
       <Paginator />

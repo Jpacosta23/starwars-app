@@ -35,7 +35,7 @@ const Characters = () => {
       <p>characters:</p>
       <ul>
         {!info.length
-          ? "cargando"
+          ? "loading..."
           : info.map((character) => <CharacterItem info={character} />)}
       </ul>
       <Paginator />

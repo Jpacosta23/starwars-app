@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
-import VehicleItem from "../Components/VehicleItem";
+import StarshipItem from "../Components/StarshipItem";
 import Paginator from "../Components/Paginator";
 import { GetContext } from "../Context/Context";
 import { useParams } from "react-router-dom";
@@ -39,8 +39,8 @@ const StarShips = () => {
       <p>Starships:</p>
       <ul>
         {!info.length
-          ? "cargando"
-          : info.map((vehicle) => <VehicleItem info={vehicle} />)}
+          ? "loading..."
+          : info.map((vehicle) => <StarshipItem info={vehicle} />)}
       </ul>
       <Paginator />
     </>

@@ -1,6 +1,20 @@
 body {
-  background-image: url(https://i.redd.it/uyn4vsu8mmv21.jpg);
+  background-color: #d3d1d1 !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
+
+h2 {
+  color: yellow;
+}
+
+ul li {
+  color: black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  width: 350px;
 }
