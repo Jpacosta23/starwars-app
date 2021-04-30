@@ -19,6 +19,7 @@ const CharacterDetail = () => {
 
   useEffect(() => {
     getCharacter(name);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name]);
 
   const info2 = info[0];
