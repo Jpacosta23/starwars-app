@@ -13,8 +13,18 @@ ul li {
   color: black;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  width: 350px;
+.container-fluid {
+  margin-right: 200px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  height: 20px;
+}
+.row-container {
+  width: 450px !important;
+  margin: 20px 20px !important;
+  box-shadow: 5px 5px 5px #b1afaf;
 }

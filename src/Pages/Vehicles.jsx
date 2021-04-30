@@ -37,11 +37,11 @@ const Vehicles = () => {
     <>
       <h1>Vehicles page</h1>
       <p>Vehicles:</p>
-      <ul>
+      <div className="container-fluid">
         {!info.length
           ? "loading..."
           : info.map((vehicle) => <VehicleItem info={vehicle} />)}
-      </ul>
+      </div>
       <Paginator />
     </>
   );

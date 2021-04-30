@@ -3,7 +3,7 @@ import React, { Link } from "react-router-dom";
 const PlanetItem = ({ info }) => {
   return (
     <>
-      <div className="ml-4">
+      <div className="row-container">
         <Link className="text-decoration-none" to={`/planet/${info.name}`}>
           <h2>{info.name}</h2>
           <ul>

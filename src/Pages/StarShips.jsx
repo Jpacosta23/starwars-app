@@ -37,11 +37,11 @@ const StarShips = () => {
     <>
       <h1>Starships page</h1>
       <p>Starships:</p>
-      <ul>
+      <div className="container-fluid">
         {!info.length
           ? "loading..."
           : info.map((vehicle) => <StarshipItem info={vehicle} />)}
-      </ul>
+      </div>
       <Paginator />
     </>
   );
