@@ -25,7 +25,7 @@ const CharacterDetail = () => {
 
   return (
     <>
-      <div>
+      <div className="row-container">
         <h2>{info2.name}</h2>
         <ul>
           <li>Birth year: {info2.birth_year}</li>
