@@ -26,7 +26,7 @@ const VehicleDetail = () => {
 
   return (
     <>
-      <div>
+      <div className="row-container">
         <h2>{info2.name}</h2>
         <ul>
           <li>Model: {info2.model}</li>

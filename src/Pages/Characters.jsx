@@ -33,11 +33,12 @@ const Characters = () => {
     <>
       <h1>Characters page</h1>
       <p>characters:</p>
-      <ul>
+      <div className="container-fluid">
         {!info.length
           ? "loading..."
           : info.map((character) => <CharacterItem info={character} />)}
-      </ul>
+      </div>
+
       <Paginator />
     </>
   );

@@ -37,7 +37,11 @@ const Navigation = () => {
       <>
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand as={Link} to="/">
-            STARWARS
+            <img
+              src="https://prodimages.everythingneon.com/1000/n105-18089-star-wars-neon-sign.jpg"
+              width="75px"
+              alt=""
+            />
           </Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/">

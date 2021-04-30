@@ -37,11 +37,12 @@ const Planets = () => {
     <>
       <h1>Planet page</h1>
       <p>Planets:</p>
-      <ul>
+      <div className="container-fluid">
         {!info.length
           ? "loading..."
           : info.map((planet) => <PlanetItem info={planet} />)}
-      </ul>
+      </div>
+
       <Paginator />
     </>
   );

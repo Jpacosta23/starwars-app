@@ -26,7 +26,7 @@ const PlanetDetail = () => {
 
   return (
     <>
-      <div>
+      <div className="row-container">
         <h2>{info2.name}</h2>
         <ul>
           <li>Rotation_period: {info2.rotation_period}</li>
